@@ -1,0 +1,61 @@
+@import '../../styles/index.scss';
+
+.section-form {
+  display: flex;
+  width: 100%;
+  flex-direction: column;
+  align-items: center;
+
+  h1 {
+    @include h1;
+    text-align: center;
+  }
+
+  form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    max-width: 380px;
+
+    input {
+      margin-top: 50px;
+    }
+
+    p {
+      width: 100%;
+      padding-left: 16px;
+      margin-top: 4px;
+      color: $color-secondary-grey;
+      font-size: 12px;
+      font-style: normal;
+      font-weight: 400;
+      line-height: 14px;
+    }
+
+    .select-positions {
+      width: 100%;
+      margin-top: 25px;
+      display: flex;
+      flex-direction: column;
+      gap: 7px;
+
+      h2 {
+        margin-bottom: 4px;
+      }
+
+      input {
+        margin: 0;
+      }
+    }
+
+    .upload-photo {
+      margin-top: 45px;
+    }
+
+    button[type="submit"] {
+      width: 100px;
+      margin-top: 50px;
+    }
+  }
+}

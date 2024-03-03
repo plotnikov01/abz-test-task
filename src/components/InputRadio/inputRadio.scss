@@ -1,0 +1,45 @@
+@import '../../styles/index.scss';
+
+.input-radio-container {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+input[type="radio"] {
+  display: grid;
+  place-content: center;
+  appearance: none;
+  font: inherit;
+  color: $color-tertiary-grey;
+  width: 20px;
+  height: 20px;
+  border: 1px solid $color-tertiary-grey;
+  border-radius: 50px;
+  position: relative;
+  cursor: pointer;
+
+  &::before {
+    content: "";
+    display: inline-block;
+    width: 10px;
+    height: 10px;
+    background-size: cover;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    top: 4px;
+    background-color: $color-secondary-blue;
+    border-radius: 50%;
+    opacity: 0;
+  }
+
+  &:checked:before {
+    color: $color-secondary-blue;
+    opacity: 1;
+  }
+
+  &:checked {
+    border: 1px solid $color-secondary-blue;
+  }
+}

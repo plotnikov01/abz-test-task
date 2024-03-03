@@ -1,0 +1,50 @@
+@import '../../styles/index.scss';
+
+.input-container {
+  position: relative;
+  width: 100%;
+  max-width: 100%;
+
+  label {
+    position: absolute;
+    top: -7px;
+    left: 15px;
+    background-color: $color-primary-grey;
+    color: $color-secondary-grey;
+    padding: 0 5px;
+
+    font-size: 12px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 14px;
+  }
+
+  input {
+    width: 100%;
+    max-width: 100%;
+    padding: 14px 16px;
+    height: 54px;
+    border-radius: 4px;
+    outline: none;
+    border: 1px solid $color-secondary-grey;
+    background-color: transparent;
+
+    font-family: Nunito;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 26px;
+  }
+
+  .error {
+    border: 2px red solid;
+  }
+
+  .error-message {
+    color: $color-red;
+    font-size: 12px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 14px;
+  }
+}
