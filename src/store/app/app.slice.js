@@ -10,8 +10,7 @@ const appSlice = createSlice({
     positionsList: [],
     isLoading: false,
   },
-  reducers: {
-  },
+  reducers: {},
   extraReducers: (builder) => {
     builder.addCase(fetchUsersList.pending, (state) => {
       state.isLoading = true;
@@ -45,7 +44,5 @@ const appSlice = createSlice({
     });
   },
 });
-
-export const {} = appSlice.actions;
 
 export default appSlice.reducer;

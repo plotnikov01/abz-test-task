@@ -29,11 +29,11 @@ export const SectionForm = (props) => {
       name: '',
       email: '',
       phone: '',
-      position_id: '',
+      position: '',
       photo: null,
     },
     validationSchema: validationSchema,
-    onSubmit: async (values) => {
+    onSubmit: async (values, { resetForm }) => {
       try {
         const tokenAction = await dispatch(fetchToken());
 
@@ -49,6 +49,7 @@ export const SectionForm = (props) => {
 
         await dispatch(postUserData({ data: formData, token: token.token }));
         await dispatch(fetchUsersList({ count: 6 }));
+        resetForm({ values: formik.initialValues });
       } catch (error) {
         console.error(error);
       }
